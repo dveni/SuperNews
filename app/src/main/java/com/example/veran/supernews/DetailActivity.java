@@ -19,7 +19,7 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
         Intent intent = getIntent();
-
+        int a;
 
         Button comentar = (Button) findViewById(R.id.Comentar);
         Button puntuar = (Button) findViewById(R.id.Puntuar);
