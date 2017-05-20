@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".DetailActivity" />
         <activity android:name=".ComentarActivity" />
-        <activity android:name=".PuntuarActivity"></activity>
+        <activity android:name=".PuntuarActivity" />
+        <activity android:name=".AddActivity"></activity>
     </application>
 
 </manifest>
