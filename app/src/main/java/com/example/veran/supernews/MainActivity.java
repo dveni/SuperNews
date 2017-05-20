@@ -67,12 +67,16 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     private void generarNoticias(){
-        Noticia n1 = new Noticia();
-        Noticia n2 = new Noticia("\"TÚ, QUE ERES TAN LISTO, ¿QUÉ PUTO PROPONES?\", DECLARAN","Tus compañeros, cuyas ideas parece que son una mierda, estarán encantados de oír qué ideas tienes tú, informan tus compañeros");
-        Noticia n3 = new Noticia("AAAAAAAAAA","aaaaaaaaaaaaaaaaaaaa");
+        Noticia n1 = new Noticia("El virus “Despacito” que ha afectado a la industria musical global podría tener su origen en Puerto Rico","Hacía más de 20 años que no ocurría una desgracia similar, desde que en 1996 el virus “La Macarena” logró infectar las listas de éxitos de todo el mundo. “Despacito” ha alcanzado esta semana el número uno en Estados Unidos, donde encabeza la lista Hot 100 de Billboard. Los expertos atribuyen su autoría a un cantante puertorriqueño llamado Luis Fonsi, aunque Europol señaló este martes que es pronto para saberlo con certeza.\n" +
+                "\n" +
+                "“Despacito” habría ido infectando poco a poco varias emisoras hasta corromper a Justin Bieber, mutando en una versión que disparó su propagación en tiempo récord. Las compañías discográficas reconocen que es pronto para decir si Puerto Rico estuvo involucrado en el ataque, que se ha convertido en una de las campañas musicales de más rápida propagación en la historia.\n" +
+                "\n" +
+                "A la cantidad de mentes de todo el mundo afectadas por el virus, hay que sumar la cantidad de listas Billboard latinas en las que “Despacito” también ha irrumpido sin piedad, pues por decimoquinta semana consecutiva está en cabeza de la lista Hot Latin Songs, seguida de El Amante, de Nicky Jam, y Chantaje, de Shakira junto a Maluma.\n" +
+                "\n" +
+                "Funcionarios de seguridad de Estados Unidos y Europa dijeron a Reuters bajo condición de anonimato que aún es demasiado pronto para determinar quién podría estar detrás de este ataque, pero no dudaban al señalar a Fonsi como uno de los principales sospechosos.");
+        Noticia n2 = new Noticia("Una vaca hipocondríaca cree que debe de estar muy enferma por la cantidad de antibióticos que le están dando","\"MADRE DEL AMOR HERMOSO, DEBO DE ESTAR EN LAS ÚLTIMAS\", SE DICE");
         news.add(n1);
         news.add(n2);
-        news.add(n3);
 
     }
 }
