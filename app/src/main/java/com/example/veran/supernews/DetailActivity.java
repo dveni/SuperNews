@@ -18,10 +18,18 @@ public class DetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
-        Intent intent = getIntent();
 
+        Bundle extras = getIntent().getExtras();
+        String body = extras.getString("body");
+        String title = extras.getString("title");
+
+        TextView titulo = (TextView) findViewById(R.id.Title);
+        TextView cuerpo = (TextView) findViewById(R.id.Body);
         Button comentar = (Button) findViewById(R.id.Comentar);
         Button puntuar = (Button) findViewById(R.id.Puntuar);
+
+        cuerpo.setText(body);
+        titulo.setText(title);
 
         comentar.setOnClickListener(new View.OnClickListener() {
             @Override
