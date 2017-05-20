@@ -31,7 +31,6 @@ public class PuntuarActivity extends AppCompatActivity implements View.OnClickLi
         switch (v.getId()) {
             case R.id.Save: {
                 try {
-                    Log.d(TAG,"Nueva puntuación");
                     Toast.makeText(getBaseContext(), "Nueva Puntuacion", Toast.LENGTH_SHORT).show();
                     int puntuacion = nuevaPuntuacion.getNumStars();
                     Intent i= getIntent();
@@ -46,7 +45,6 @@ public class PuntuarActivity extends AppCompatActivity implements View.OnClickLi
             }
 
             case R.id.CancelP: {
-                Log.d(TAG, "Puntuación cancelada");
                 Toast.makeText(getBaseContext(), "Puntuacion cancelada", Toast.LENGTH_SHORT).show();
                 setResult(RESULT_CANCELED);
                 finish();

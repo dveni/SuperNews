@@ -33,7 +33,6 @@ public class ComentarActivity extends AppCompatActivity implements View.OnClickL
         switch (v.getId()) {
             case R.id.SaveC: {
                 try {
-                    Log.d(TAG,"Nuevo comentario");
                     Toast.makeText(getBaseContext(), "Nuevo comentario", Toast.LENGTH_SHORT).show();
                     String comentario = nuevoComentario.getText().toString();
                     Intent i= getIntent();
@@ -48,7 +47,6 @@ public class ComentarActivity extends AppCompatActivity implements View.OnClickL
             }
 
             case R.id.CancelC: {
-                Log.d(TAG, "Comentario cancelado");
                 Toast.makeText(getBaseContext(), "Comentario cancelado", Toast.LENGTH_SHORT).show();
                 setResult(RESULT_CANCELED);
                 finish();
