@@ -16,6 +16,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private List<Noticia> news;
+    private final int ADD = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,19 +44,28 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        Button boton = (Button) findViewById(R.id.boton);
+        Button boton = (Button) findViewById(R.id.Add);
 
         boton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Toast.makeText(getBaseContext(),"Change", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getBaseContext(),"Add", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this, AddActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent,ADD);
             }
         });
 
     }
 
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        if(resultCode==RESULT_OK){
+            String title = data.getExtras().getString("title");
+            String body = data.getExtras().getString("body");
+            news.add(new Noticia(title, body));
+        }else{
+            Toast.makeText(getBaseContext(),"Accion cancelada", Toast.LENGTH_SHORT).show();
+        }
+    }
     private void generarNoticias(){
         Noticia n1 = new Noticia();
         Noticia n2 = new Noticia("\"TÚ, QUE ERES TAN LISTO, ¿QUÉ PUTO PROPONES?\", DECLARAN","Tus compañeros, cuyas ideas parece que son una mierda, estarán encantados de oír qué ideas tienes tú, informan tus compañeros");
