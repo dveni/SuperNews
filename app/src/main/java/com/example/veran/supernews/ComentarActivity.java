@@ -44,6 +44,7 @@ public class ComentarActivity extends AppCompatActivity {
                 Toast.makeText(getBaseContext(), "Comentario cancelado", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(ComentarActivity.this, DetailActivity.class);
                 startActivity(intent);
+
             }
         });
 
