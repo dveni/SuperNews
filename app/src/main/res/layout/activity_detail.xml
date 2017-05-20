@@ -48,7 +48,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/newComment"
+            android:id="@+id/comentario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView" />
@@ -68,10 +68,11 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/newPuntuation"
+            android:id="@+id/puntuación"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView" />
+
     </LinearLayout>
 
     <LinearLayout
