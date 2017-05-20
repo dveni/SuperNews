@@ -47,7 +47,6 @@ public class ComentarActivity extends AppCompatActivity implements View.OnClickL
             }
 
             case R.id.CancelC: {
-                Toast.makeText(getBaseContext(), "Comentario cancelado", Toast.LENGTH_SHORT).show();
                 setResult(RESULT_CANCELED);
                 finish();
 
