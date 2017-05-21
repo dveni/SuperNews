@@ -22,8 +22,8 @@ public class ComentarActivity extends AppCompatActivity implements View.OnClickL
         Button guardar = (Button) findViewById(R.id.SaveC);
         Button cancelar = (Button) findViewById(R.id.CancelC);
         TextView titulo = (TextView) findViewById(R.id.TitleComentar);
-        TextView comentarioC = (TextView) findViewById(R.id.comentarioComentar);
         nuevoComentario = (EditText) findViewById(R.id.nuevoComentario);
+        titulo.setText(getIntent().getExtras().getString("title"));
         guardar.setOnClickListener(this);
         cancelar.setOnClickListener(this);
 

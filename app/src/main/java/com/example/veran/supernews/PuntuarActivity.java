@@ -25,6 +25,9 @@ public class PuntuarActivity extends AppCompatActivity implements View.OnClickLi
         nuevaPuntuacion = (RatingBar) findViewById(R.id.nuevaPuntuacion);
         guardar.setOnClickListener(this);
         cancelar.setOnClickListener(this);
+
+        TextView titulo = (TextView) findViewById(R.id.TitlePuntuar);
+        titulo.setText(getIntent().getExtras().getString("title"));
     }
     public void onClick(View v) {
         Log.d(TAG, "onClick");

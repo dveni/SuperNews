@@ -30,7 +30,7 @@ public class DetailActivity extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
         String body = extras.getString("body");
-        String title = extras.getString("title");
+        final String title = extras.getString("title");
 
 
         TextView titulo = (TextView) findViewById(R.id.Title);
@@ -54,6 +54,7 @@ public class DetailActivity extends AppCompatActivity {
                 Log.d(TAG, "onClickComentar");
                 Toast.makeText(getBaseContext(), "Comenta por favor", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(DetailActivity.this, ComentarActivity.class);
+                intent.putExtra("title",title);
                 startActivityForResult(intent,COMENTAR);
             }
         });
@@ -64,6 +65,7 @@ public class DetailActivity extends AppCompatActivity {
                 Log.d(TAG, "onClickPuntuar");
                 Toast.makeText(getBaseContext(),"Puntúa por favor", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(DetailActivity.this, PuntuarActivity.class);
+                intent.putExtra("title",title);
                 startActivityForResult(intent,PUNTUAR);
             }
         });
