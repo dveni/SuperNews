@@ -3,6 +3,7 @@ package com.example.veran.supernews;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -17,6 +18,7 @@ import java.util.List;
 
 
 public class DetailActivity extends AppCompatActivity {
+    private static final String TAG = DetailActivity.class.getName();
     private List<String> comments;
     private static final int COMENTAR = 0;
     private static final int PUNTUAR = 1;
@@ -49,6 +51,7 @@ public class DetailActivity extends AppCompatActivity {
         comentar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.d(TAG, "onClickComentar");
                 Toast.makeText(getBaseContext(), "Comenta por favor", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(DetailActivity.this, ComentarActivity.class);
                 startActivityForResult(intent,COMENTAR);
@@ -58,6 +61,7 @@ public class DetailActivity extends AppCompatActivity {
         puntuar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                Log.d(TAG, "onClickPuntuar");
                 Toast.makeText(getBaseContext(),"Puntúa por favor", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(DetailActivity.this, PuntuarActivity.class);
                 startActivityForResult(intent,PUNTUAR);

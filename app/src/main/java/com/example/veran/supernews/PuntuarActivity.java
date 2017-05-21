@@ -14,7 +14,7 @@ import android.widget.Toast;
 public class PuntuarActivity extends AppCompatActivity implements View.OnClickListener {
 
     RatingBar nuevaPuntuacion;
-    private static final String TAG = ComentarActivity.class.getName();
+    private static final String TAG = PuntuarActivity.class.getName();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +27,7 @@ public class PuntuarActivity extends AppCompatActivity implements View.OnClickLi
         cancelar.setOnClickListener(this);
     }
     public void onClick(View v) {
+        Log.d(TAG, "onClick");
         switch (v.getId()) {
             case R.id.Save: {
                 try {
@@ -50,7 +51,7 @@ public class PuntuarActivity extends AppCompatActivity implements View.OnClickLi
 
             }
             default:
-                Log.e(TAG, "...");
+                Log.e(TAG, "Resultado no esperado");
         }
     }
 }

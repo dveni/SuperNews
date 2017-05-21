@@ -30,6 +30,7 @@ public class ComentarActivity extends AppCompatActivity implements View.OnClickL
     }
 
     public void onClick(View v) {
+        Log.d(TAG, "onClick");
         switch (v.getId()) {
             case R.id.SaveC: {
                 try {
@@ -52,7 +53,7 @@ public class ComentarActivity extends AppCompatActivity implements View.OnClickL
 
             }
             default:
-                Log.e(TAG, "...");
+                Log.e(TAG, "Resultado no esperado");
         }
     }
 }
