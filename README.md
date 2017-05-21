@@ -2,10 +2,8 @@
 ADSW exercise
 First Android project
 
-Falta por implementar:
--Hacer logs
+Errores conocidos:
 
-Solución de errores:
 -Al salir de la noticia y volver desaparecen los comentarios y puntuacion
 -DetailActivity: Solo permite mostrar un comentario, no deja hacer scroll para ver el resto
 
