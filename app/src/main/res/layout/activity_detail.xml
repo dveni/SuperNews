@@ -5,18 +5,13 @@
     android:layout_height="fill_parent">
     <!-- Here you put the rest of your current view-->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.veran.supernews.DetailActivity">
-
-    <LinearLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.veran.supernews.DetailActivity">
 
         <TextView
             android:id="@+id/Title"
@@ -32,12 +27,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
 
         <TextView
             android:id="@+id/Comentarios"
@@ -50,14 +39,9 @@
         <ListView
             android:id="@+id/comentarios"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:footerDividersEnabled="false"
+            android:scrollbars="horizontal" />
 
         <TextView
             android:id="@+id/Puntuacion"
@@ -67,34 +51,35 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/puntuación"
+        <RatingBar
+            android:id="@+id/ratingBar2"
+            style="@android:style/Widget.DeviceDefault.Light.RatingBar"
+            android:layout_width="252dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:isIndicator="true"
+            android:numStars="5" />
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
+            <Button
+                android:id="@+id/Comentar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Comentar" />
+
+            <Button
+                android:id="@+id/Puntuar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Puntuar" />
+        </LinearLayout>
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/Comentar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Comentar" />
-
-        <Button
-            android:id="@+id/Puntuar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Puntuar" />
-    </LinearLayout>
-</LinearLayout>
 
 
 </ScrollView>

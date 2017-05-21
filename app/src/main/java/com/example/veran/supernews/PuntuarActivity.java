@@ -22,7 +22,6 @@ public class PuntuarActivity extends AppCompatActivity implements View.OnClickLi
 
         Button guardar = (Button) findViewById(R.id.Save);
         Button cancelar = (Button) findViewById(R.id.CancelP);
-        TextView titulo = (TextView) findViewById(R.id.TitlePuntuar);
         nuevaPuntuacion = (RatingBar) findViewById(R.id.nuevaPuntuacion);
         guardar.setOnClickListener(this);
         cancelar.setOnClickListener(this);
@@ -32,9 +31,9 @@ public class PuntuarActivity extends AppCompatActivity implements View.OnClickLi
             case R.id.Save: {
                 try {
                     Toast.makeText(getBaseContext(), "Nueva Puntuacion", Toast.LENGTH_SHORT).show();
-                    int puntuacion = nuevaPuntuacion.getNumStars();
+                    float puntuacion = nuevaPuntuacion.getRating();
                     Intent i= getIntent();
-                    i.putExtra("puntuación",puntuacion);
+                    i.putExtra("puntuacion",puntuacion);
 
                     setResult(RESULT_OK, i);
                     finish();

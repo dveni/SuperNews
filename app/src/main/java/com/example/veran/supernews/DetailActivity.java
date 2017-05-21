@@ -71,7 +71,12 @@ public class DetailActivity extends AppCompatActivity {
         if(resultCode == RESULT_OK&&requestCode == COMENTAR){
             String comentario = data.getExtras().getString("comentario");
             comments.add(comentario);
-        } else {
+        }else if(resultCode==RESULT_OK && requestCode==PUNTUAR){
+            RatingBar puntuation = (RatingBar) findViewById(R.id.ratingBar2);
+            float puntuacion = data.getExtras().getFloat("puntuacion");
+            puntuation.setRating(puntuacion);
+
+        } else{
             Toast.makeText(getBaseContext(), "Comentario cancelado", Toast.LENGTH_SHORT).show();
         }
     }
