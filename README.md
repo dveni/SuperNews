@@ -3,9 +3,11 @@ ADSW exercise
 First Android project
 
 Falta por implementar:
--Sistema de comentarios
--Sistema de puntuaciones
 -Hacer logs
+
+Solución de errores:
+-Al salir de la noticia y volver desaparecen los comentarios y puntuacion
+-DetailActivity: Solo permite mostrar un comentario, no deja hacer scroll para ver el resto
 
 Estaría guay implementar/hacer:
 -Diseño más currado de la aplicación (material design?)
